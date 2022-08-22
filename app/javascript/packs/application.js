@@ -13,4 +13,8 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+// this will enable the dom to load before the dropdown logic 
+$(document).on("turbolinks:load", () => $(".ui.dropdown").dropdown());
+
+
 
