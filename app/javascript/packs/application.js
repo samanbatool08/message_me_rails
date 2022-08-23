@@ -14,7 +14,13 @@ Turbolinks.start()
 ActiveStorage.start()
 
 // this will enable the dom to load before the dropdown logic 
-$(document).on("turbolinks:load", () => $(".ui.dropdown").dropdown());
+$(document).on("turbolinks:load", () => {
+  $(".ui.dropdown").dropdown();
+  $('.message .close').on('click', function() {
+    $(this).closest('.message').transition('fade');
+  })
+});
+
 
 
 
